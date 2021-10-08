@@ -1,16 +1,16 @@
-import React from 'react'
+import React, { useState,useEffect } from 'react'
+import Header from './components/Header'
 
 const App: React.FC = () => {
+
+  
+  const [data,SetCovidData] = useState<covidData>()
+
   return (
-    <div className="h-screen bg-gray-900 text-gray-200 flex items-center justify-center font-mono">
-      <a
-        className="hover:text-gray-400 text-xl"
-        href="https://github.com/joshxfi/vr2t-generator"
-        rel="noreferrer"
-        target="_blank"
-      >
-        ✨ Give us a star!
-      </a>
+    <div className="w-full h-screen bg-gray-900 text-gray-200">
+      <div className ='container grid grid-cols-12'>
+          <Header/>
+      </div>
     </div>
   )
 }
