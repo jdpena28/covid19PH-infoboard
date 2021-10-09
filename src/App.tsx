@@ -3,9 +3,11 @@ import axios from 'axios'
 import Header from './components/Header'
 import Today from './components/Today-Board'
 import Total from './components/Total-Board'
+/* 
+remove reactchartjs2 and reactchart from dependencies */
 
 const App: React.FC = () => {
-  const [data,SetCovidData] = useState<covidData>()
+const [data,SetCovidData] = useState<covidData>()
 
   const getData = () => {
     axios.get('https://disease.sh/v3/covid-19/countries/philippines?strict=true')
