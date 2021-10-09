@@ -7,8 +7,7 @@ import Total from './components/Total-Board'
 remove reactchartjs2 and reactchart from dependencies */
 
 const App: React.FC = () => {
-const [data,SetCovidData] = useState<covidData>()
-
+  const [data,SetCovidData] = useState<covidData>()
   const getData = () => {
     axios.get('https://disease.sh/v3/covid-19/countries/philippines?strict=true')
     .then((response)=>{
@@ -22,7 +21,7 @@ const [data,SetCovidData] = useState<covidData>()
 
   return (
     <div className="w-full h-screen bg-gray-900 text-gray-200">
-      <div className ='container mx-auto grid grid-cols-12 gap-4'>
+      <div className ='container mx-auto px-12 grid grid-cols-12 gap-4'>
           <Header/>
           <Today todayCases = {data?.todayCases} todayDeaths ={data?.todayDeaths}
           todayRecovered = {data?.todayRecovered}/>
