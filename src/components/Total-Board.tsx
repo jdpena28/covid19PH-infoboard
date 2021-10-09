@@ -38,7 +38,7 @@ const Total: React.FC<total> = ({ active, critical, deaths }) => {
   }
 
   return (
-    <div className="col-start-5 col-span-7 bg-gray-600 w-full rounded-3xl text-xl flex justify-around items-center ">
+    <div className="col-start-5 col-span-8 bg-gray-600 w-full rounded-3xl text-xl flex justify-around items-center ">
       <div className='flex flex-col'>
         <div>
           <div className="rounded-[50%] w-[12px] h-[12px] bg-[#28ff28] inline-block"></div>
