@@ -30,3 +30,16 @@ activePerOneMillion:number
 recoveredPerOneMillion:number
 criticalPerOneMillion:number
 }
+
+
+interface today {
+    todayCases: number|undefined
+    todayDeaths: number|undefined
+    todayRecovered:number|undefined
+}
+
+interface total {
+    active: number|undefined
+    critical:number|undefined
+    deaths: number|undefined
+}
