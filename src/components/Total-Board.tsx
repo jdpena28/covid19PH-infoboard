@@ -2,13 +2,16 @@ import React from 'react';
 import {Doughnut} from 'react-chartjs-2'
 
 const Total: React.FC<total> = ({ active, critical, deaths }) => {
-
+  const stringData = [active,critical,deaths]
+  const numData = stringData.map(e => {
+    return (e?.replace(',',''))
+  })
   const data = {
     labels: ['Active','Critical','Deaths'],
-    datasets: [
+    datasets: [   
       {
         label: '',
-        data: [active,critical,deaths],
+        data: [...numData],
         backgroundColor: [
           'rgba(40, 255, 40, 0.8)',
           'rgba(255, 20, 47, 0.8)',
@@ -35,7 +38,7 @@ const Total: React.FC<total> = ({ active, critical, deaths }) => {
   }
 
   return (
-    <div className="col-start-5 col-span-7 bg-gray-400 w-full rounded-3xl text-xl flex justify-around items-center ">
+    <div className="col-start-5 col-span-7 bg-gray-600 w-full rounded-3xl text-xl flex justify-around items-center ">
       <div className='flex flex-col'>
         <div>
           <div className="rounded-[50%] w-[12px] h-[12px] bg-[#28ff28] inline-block"></div>
@@ -60,7 +63,7 @@ const Total: React.FC<total> = ({ active, critical, deaths }) => {
         </div>
       </div>
       <div className='w-[130px] h-[130px]'>
-        <Doughnut data ={data} options={option}/>
+      <Doughnut data = {data} options={option}/>
       </div>
     </div>
   );

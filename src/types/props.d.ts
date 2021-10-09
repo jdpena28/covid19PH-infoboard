@@ -33,13 +33,13 @@ criticalPerOneMillion:number
 
 
 interface today {
-    todayCases: number|undefined
-    todayDeaths: number|undefined
-    todayRecovered:number|undefined
+    todayCases: string|undefined
+    todayDeaths: string|undefined
+    todayRecovered:string|undefined
 }
 
 interface total {
-    active: number|undefined
-    critical:number|undefined
-    deaths: number|undefined
+    active: string|undefined
+    critical:string|undefined
+    deaths: string|undefined
 }
