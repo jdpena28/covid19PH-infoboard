@@ -15,7 +15,7 @@ const Total: React.FC<total> = ({ active, critical, deaths }) => {
         backgroundColor: [
           'rgba(40, 255, 40, 0.8)',
           'rgba(255, 20, 47, 0.8)',
-          'rgba(12, 12, 12, 0.8)',
+          'rgba(23, 27, 27, 0.8);',
         ],
         borderColor: [
           'rgba(40, 255, 40, 1)',
@@ -55,7 +55,7 @@ const Total: React.FC<total> = ({ active, critical, deaths }) => {
           </p>
         </div>
         <div>
-          <div className="rounded-[50%] w-[12px] h-[12px] bg-black inline-block"></div>
+          <div className="rounded-[50%] w-[12px] h-[12px] bg-[#171b1b] inline-block"></div>
           <p className="font-secondary inline">
             &nbsp;DEATH&emsp;&nbsp;&emsp;&thinsp;
             <p className="font-primary inline">:&nbsp;&emsp;{deaths}</p>
