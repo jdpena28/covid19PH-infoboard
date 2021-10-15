@@ -5,6 +5,7 @@ const Header = () => {
         <header className='pt-3 font-primary col-span-12 text-center space-y-2 mb-5'>
             <h1 className='underline text-3xl'>COVID-19 Information Board</h1>
             <h2 className='text-2xl'>Philippines</h2>
+            <h3>API: <a className='underline text-blue-300 hover:text-blue-800' href="https://disease.sh">Disease.sh</a></h3>
         </header>
     )
 }

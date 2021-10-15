@@ -36,7 +36,6 @@ interface historical {
     province:string[]
     timeline: {
         cases: {
-            
             //#region days
            /*  day1: number
             day2: number
