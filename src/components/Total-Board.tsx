@@ -6,7 +6,7 @@ const Total: React.FC<total> = ({ active, critical, deaths }) => {
   const numData = stringData.map(e => {
     return (e?.replace(',',''))
   })
-  const data = {
+  const data:any = {
     labels: ['Active','Critical','Deaths'],
     datasets: [   
       {
@@ -27,7 +27,7 @@ const Total: React.FC<total> = ({ active, critical, deaths }) => {
     ],
   };
 
-  const option = {
+  const option:{} = {
     maintainAspectRatio:false,
     layout:{
       padding:0
