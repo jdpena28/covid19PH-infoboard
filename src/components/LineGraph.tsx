@@ -4,11 +4,11 @@ import numeral from "numeral";
 
 const options:{} = {
   legend: {
-    display: false
+    display: true,
   },
   elements: {
     point: {
-      radius: 0,
+      radius: 3,
     },
   },
   maintainAspectRatio: false,
@@ -29,11 +29,6 @@ const options:{} = {
       {
         gridLines: {
           display: false,
-        },
-        ticks: {
-          callback: function (value:number, index?:number, values?:number) {
-            return numeral(value).format("0a");
-          },
         },
       },
     ],

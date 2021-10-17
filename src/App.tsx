@@ -18,7 +18,7 @@ const App: React.FC = () => {
         SetCovidData(response.data);
       })
       .catch((err) => {
-        console.log('error');
+        console.log(err);
       });
   };
 
