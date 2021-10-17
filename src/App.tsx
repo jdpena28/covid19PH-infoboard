@@ -9,8 +9,7 @@ import LineGraph from './components/LineGraph';
 
 
 const App: React.FC = () => {
-  const [data, SetCovidData] = useState<covidData>();
-  const [historicalData, setHistoricalData] = useState<any|null>({});
+  const [data, SetCovidData] = useState<covidData>()
 
   const getData = () => {
     axios
@@ -23,16 +22,9 @@ const App: React.FC = () => {
       });
   };
 
-  const getHistorical = async () => {
-    const res = await axios.get(
-      'https://disease.sh/v3/covid-19/historical/phl?lastdays=30'
-    );
-    setHistoricalData(res.data);
-  };
 
   useEffect(() => {
     getData();
-    getHistorical();
   }, []);
 
   const format = (num?: number) => {
@@ -43,15 +35,14 @@ const App: React.FC = () => {
     }
   };
 
-  let days:string[]
-  let active = []
 
-  console.log(historicalData?.timeline)
 
  /*  Object.entries(historicalData?.timeline.cases).forEach(
     ([key, value]) => {
       days.push(key)
       active.push(value)
+
+      Doesn't work in storing key from api request :<
     }
   )
    */
