@@ -8,6 +8,9 @@ module.exports = {
         primary:"'Poppins', sans-serif",
         secondary:"'Josefin Sans', sans-serif",
       },
+      screens: {
+        'sm':{'max':'639px'},
+      }
     },
   },
   variants: {
