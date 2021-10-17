@@ -1,5 +1,5 @@
 {
-  "name": "vr2t-boilertplate",
+  "name": "covid19ph-infoboard",
   "version": "1.0.0",
   "scripts": {
     "dev": "vite",
