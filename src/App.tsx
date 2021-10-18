@@ -5,16 +5,17 @@ import Today from './components/Today-Board';
 import Total from './components/Total-Board';
 import Footer from './components/Footer';
 import LineGraph from './components/LineGraph';
+import Loaders from './components/Loaders';
 
 
 
 const App: React.FC = () => {
   const [data, SetCovidData] = useState<covidData>()
+  const [loading,setLoading] = useState<boolean>(true)
 
-  const getData = () => {
-    axios
-      .get('https://disease.sh/v3/covid-19/countries/philippines?strict=true')
-      .then((response) => {
+  const getData = async() => {
+    await axios.get('https://disease.sh/v3/covid-19/countries/philippines?strict=true')
+    .then((response) => {
         SetCovidData(response.data);
       })
       .catch((err) => {
@@ -25,6 +26,9 @@ const App: React.FC = () => {
 
   useEffect(() => {
     getData();
+    setTimeout(() => {
+      setLoading(false)
+    },600)
   }, []);
 
   const format = (num?: number) => {
@@ -48,9 +52,9 @@ const App: React.FC = () => {
    */
 
 
-  return (
+  return loading?(<Loaders loading={loading}/>):(
     <div className="w-full h-screen bg-gray-900 text-gray-200">
-      <div className="container mx-auto px-20 sm:flex sm:flex-col grid grid-cols-12 gap-x-4">
+      <div className="container mx-auto px-20 grid grid-cols-12 gap-x-4">
         <Header />
         <Today
           todayCases={format(data?.todayCases)}
@@ -66,7 +70,7 @@ const App: React.FC = () => {
       <LineGraph/>
       <Footer />
     </div>
-  );
+    )
 };
 
 export default App;

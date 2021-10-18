@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Line } from "react-chartjs-2";
 
 
+
 const options:{} = {
   legend: {
     display: true,
@@ -12,24 +13,15 @@ const options:{} = {
     },
   },
   maintainAspectRatio: false,
-  tooltips: {
-    mode: "index",
-    intersect: false,
-  },
   scales: {
     xAxes: [
       {
-        type: "time",
-        time: {
-          format: "MM/DD/YY",
-        },
+        
       },
     ],
     yAxes: [
       {
-        gridLines: {
-          display: false,
-        },
+        
       },
     ],
   },
