@@ -6,7 +6,7 @@ import Total from './components/Total-Board';
 import Footer from './components/Footer';
 import LineGraph from './components/LineGraph';
 import Loaders from './components/Loaders';
-/* import { fetchData } from './components/LineGraph'; */
+
 
 
 
@@ -28,10 +28,9 @@ const App: React.FC = () => {
 
   useEffect(() => {
     getData();
-    /* fetchData(); */
     setTimeout(() => {
       setLoading(false)
-    },800)
+    },900)
   }, []);
 
   const format = (num?: number) => {

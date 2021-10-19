@@ -14,16 +14,13 @@ const Today:React.FC<today> = ({todayCases,todayDeaths,todayRecovered}) => {
                 <p>Recovered: {todayRecovered}</p>
             </div>
             <div className='hidden sm:block w-max mx-auto'>
-                <p className="font-secondary">
-                &nbsp;CASES&emsp;&emsp;&emsp;&emsp;&nbsp;
+                <p className="font-secondary">CASES&emsp;&emsp;&emsp;&emsp;
                 <p className="font-primary inline">:&nbsp;&emsp;{todayCases}</p>
                 </p>
-                <p className="font-secondary">
-                &nbsp;DEATHS&emsp;&nbsp;&emsp;&emsp;&nbsp;
+                <p className="font-secondary">DEATHS &emsp; &emsp;&nbsp;&nbsp;
                 <p className="font-primary inline">:&nbsp;&emsp;{todayDeaths}</p>
                 </p>
-                <p className="font-secondary">
-                &nbsp;RECOVERED&emsp;&nbsp;
+                <p className="font-secondary">RECOVERED&emsp;
                 <p className="font-primary inline">:&nbsp;&emsp;{todayRecovered}</p>
                 </p>
             </div>
