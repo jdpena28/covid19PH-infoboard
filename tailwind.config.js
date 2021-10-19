@@ -9,7 +9,7 @@ module.exports = {
         secondary:"'Josefin Sans', sans-serif",
       },
       screens: {
-        'sm':{'max':'639px'},
+        'sm':{'max':'768px'},
       }
     },
   },
