@@ -2,13 +2,11 @@ import React from 'react'
 import RingLoader from "react-spinners/RingLoader";
 
 const override = `
-  display: block;
   position: absolute;
-  top:0;
-  bottom:0;
+  top:40%;
   left:0;
   right:0;
-  margin: auto;
+  margin:auto;
   border-color: violet;
 `;
 
