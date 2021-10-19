@@ -56,10 +56,10 @@ const App: React.FC = () => {
 
 
   return (
-    <div className="w-full h-screen bg-gray-900 text-gray-200">
+    <div className="relative w-full bg-gray-900 text-gray-200 min-h-screen space-y-3 sm:pb-11">
       <Header />
     { loading?(<Loaders loading={loading}/>)
-    :(<><div className="container mx-auto px-20 grid grid-cols-12 gap-x-4">
+    :(<><div className="container mx-auto px-20 grid grid-cols-12 gap-x-4 sm:flex sm:flex-col sm:px-6 sm: gap-y-5">
         <Today
           todayCases={format(data?.todayCases)}
           todayDeaths={format(data?.todayDeaths)}

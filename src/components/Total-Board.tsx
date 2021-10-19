@@ -38,7 +38,7 @@ const Total: React.FC<total> = ({ active, critical, deaths }) => {
   }
 
   return (
-    <div className="col-start-5 col-span-8 bg-gray-600 w-full rounded-3xl text-xl flex justify-around items-center ">
+    <div className="col-start-5 col-span-8 bg-gray-600 w-full rounded-3xl text-xl flex justify-around items-center sm:text-lg sm:py-4">
       <div className='flex flex-col'>
         <div>
           <div className="rounded-[50%] w-[12px] h-[12px] bg-[#28ff28] inline-block"></div>
@@ -62,7 +62,7 @@ const Total: React.FC<total> = ({ active, critical, deaths }) => {
           </p>
         </div>
       </div>
-      <div className='w-[130px] h-[130px]'>
+      <div className='w-[130px] h-[130px] sm:w-[80px] sm:h-[80px]'>
       <Doughnut data = {data} options={option}/>
       </div>
     </div>
