@@ -6,6 +6,8 @@ import Total from './components/Total-Board';
 import Footer from './components/Footer';
 import LineGraph from './components/LineGraph';
 import Loaders from './components/Loaders';
+/* import { fetchData } from './components/LineGraph'; */
+
 
 
 
@@ -26,9 +28,10 @@ const App: React.FC = () => {
 
   useEffect(() => {
     getData();
+    /* fetchData(); */
     setTimeout(() => {
       setLoading(false)
-    },600)
+    },800)
   }, []);
 
   const format = (num?: number) => {
@@ -52,10 +55,11 @@ const App: React.FC = () => {
    */
 
 
-  return loading?(<Loaders loading={loading}/>):(
+  return (
     <div className="w-full h-screen bg-gray-900 text-gray-200">
-      <div className="container mx-auto px-20 grid grid-cols-12 gap-x-4">
-        <Header />
+      <Header />
+    { loading?(<Loaders loading={loading}/>)
+    :(<><div className="container mx-auto px-20 grid grid-cols-12 gap-x-4">
         <Today
           todayCases={format(data?.todayCases)}
           todayDeaths={format(data?.todayDeaths)}
@@ -67,7 +71,7 @@ const App: React.FC = () => {
           deaths={format(data?.deaths)}
         />
       </div>
-      <LineGraph/>
+      <LineGraph/></>)}
       <Footer />
     </div>
     )
